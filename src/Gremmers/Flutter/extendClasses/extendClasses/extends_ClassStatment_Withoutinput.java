@@ -8,7 +8,7 @@ public class extends_ClassStatment_Withoutinput extends AST {
 
     private String CLASS ;
     private NameN ID ;
-    private String ID_ID;
+    private NameN ID_ID;
 
     public String getCLASS() {
         return CLASS;
@@ -26,11 +26,11 @@ public class extends_ClassStatment_Withoutinput extends AST {
         this.ID = ID;
     }
 
-    public String getID_ID() {
+    public NameN getID_ID() {
         return ID_ID;
     }
 
-    public void setID_ID(String ID_ID) {
+    public void setID_ID(NameN ID_ID) {
         this.ID_ID = ID_ID;
     }
 
