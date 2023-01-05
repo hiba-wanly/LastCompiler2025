@@ -44,7 +44,21 @@ public class ArrayType extends AST {
         return arrayfloat;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        if(arrayvar!=null)
+            return "\n"+arrayvar+"\n";
+        else if (arrayint!=null) {
+            return "\n"+arrayint;
+        } else if (arraystring!=null) {
+            return "\n"+arraystring;
+        }
+        return "\n"+arrayfloat;
+//        return "ArrayType{" +
+//                "arrayvar=" + arrayvar +
+//                ", arrayint=" + arrayint +
+//                ", arraystring=" + arraystring +
+//                ", arrayfloat=" + arrayfloat +
+//                '}';
+    }
 }

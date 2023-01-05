@@ -28,4 +28,13 @@ public class ArrayFloat extends AST {
     public ArrayVarFloat getArrayVarFloat(){
         return arrayVarFloat;
     }
+
+    @Override
+    public String toString() {
+        return "ArrayFloat{" +
+                "flot='" + flot + '\'' +
+                ", id=" + id +
+                ", arrayVarFloat=" + arrayVarFloat +
+                '}';
+    }
 }

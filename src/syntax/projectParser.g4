@@ -133,19 +133,19 @@ rule :  ID |  NUM
 ifstatement : if_WithInput (elseif_WithInput)*  else_WithInput? ;
 
 
-if_WithInput : IF HLEFT (conditions)  HRIGHT CURLELEFT ifif CURLERIGHT ;
+if_WithInput : IF HLEFT (conditions)+  HRIGHT CURLELEFT ifif CURLERIGHT ;
 
 ifif : inputI+
      | BREAK SEMECOLON
      | CONTINUE SEMECOLON
      ;
 
-elseif_WithInput : ELSEIF HLEFT (conditions)  HRIGHT CURLELEFT ifif CURLERIGHT ;
+elseif_WithInput : ELSEIF HLEFT (conditions)+  HRIGHT CURLELEFT ifif CURLERIGHT ;
 
 else_WithInput : ELSE CURLELEFT ifif CURLERIGHT ;
 
 
-whilestatemen :  WHILE HLEFT conditions  HRIGHT CURLELEFT ifif CURLERIGHT ;
+whilestatemen :  WHILE HLEFT conditions+  HRIGHT CURLELEFT ifif CURLERIGHT ;
 
 /* my edit "neme" in 12/30 */
 switchstatement : switch_With_ID
@@ -267,7 +267,7 @@ returnStatement : returnID | returnINPUT_D_Q_I |  returnRule | return | returnNu
 returnID : RETURN ID;
 returnINPUT_D_Q_I : RETURN INPUT_D_Q_I  ;
 returnRule: RETURN QOUT rule+ QOUT;
-return : RETURN;
+return : RETURN;  ////
 returnNum :RETURN NUM ;
 returnNumFloat: RETURN NUM_FLOAT;
 returnNumDouble : RETURN NUM_DOUBLE;
@@ -497,13 +497,6 @@ inputI : initial
       ;
 
  inputclass : initial
-            | ifstatement
-            | loop
-            | doWhilestatement
-            | whilestatemen
-            | printstatement
-            | switchstatement
-            | tryCatchstatement
             | functionStatement
             ;
 

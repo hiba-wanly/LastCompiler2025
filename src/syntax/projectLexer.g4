@@ -181,7 +181,7 @@ SEMECOLON :';';
 EQUAL    : '=' ;
 FOR :' '* 'for' ' '*  ;//->pushMode(CLASS_MODE);
 IF :' '* 'if' ' '* ; //->pushMode(CLASS_MODE);
-ELSEIF :' '* 'elseif' ' '* ; // ->pushMode(CLASS_MODE);
+ELSEIF :' '* 'else if' ' '* ; // ->pushMode(CLASS_MODE);
 
 
 

@@ -5,11 +5,12 @@ import Gremmers.NameN;
 import Gremmers.var.InputClasses;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ClassStatement extends AST {
     private String clas ;
     private NameN id ;
-    private ArrayList<InputClasses> inputclasses;
+    private List<InputClasses> inputclasses = new ArrayList<InputClasses>();
 
     public void setClas(String clas ){
         this.clas = clas;
@@ -25,10 +26,10 @@ public class ClassStatement extends AST {
         return id;
     }
 
-    public void setInputclasses(ArrayList<InputClasses> inputclasses){
+    public void setInputclasses(List<InputClasses> inputclasses){
         this.inputclasses = inputclasses;
     }
-    public ArrayList<InputClasses> getInputclasses(){
+    public List<InputClasses> getInputclasses(){
         System.out.println("addinput");
         return inputclasses;
     }

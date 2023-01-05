@@ -55,7 +55,8 @@ public class Initial extends AST {
          else if (this.varvariableexpr != null)
              return "\n Body Classes {"+ varvariableexpr+"\n";
 //          if (this.varvariableString != null)
-             return "\n Body Classes {"+ varvariableString+"\n";
+          else if (this.varvariableString!=null)  return "\n Body Classes {"+ varvariableString+"\n";
+          return "\n Body Classes{"+arrayType+"\n";
 //        return "Initial{" +
 //                "varvariable=" + varvariable +
 //                ", varvariableexpr=" + varvariableexpr +

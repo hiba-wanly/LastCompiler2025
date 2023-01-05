@@ -28,10 +28,16 @@ public class ArrayBody extends AST {
 
     @Override
     public String toString() {
-        return "ArrayBody{" +
-                "arrayVarInt=" + arrayVarInt +
-                ", arrayVarFloat=" + arrayVarFloat +
-                ", arrayVarString=" + arrayVarString +
-                '}';
+        if(arrayVarString != null){
+            return "\n ArrayBody"+arrayVarString + "\n";
+        } else if (arrayVarFloat != null) {
+            return "\n ArrayBody" +arrayVarFloat +"\n";
+        }
+        return "\n ArrayBody" + arrayVarInt+"\n";
+//        return "ArrayBody{" +
+//                "arrayVarInt=" + arrayVarInt +
+//                ", arrayVarFloat=" + arrayVarFloat +
+//                ", arrayVarString=" + arrayVarString +
+//                '}';
     }
 }
